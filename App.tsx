@@ -1,26 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import styled from 'styled-components/native';
-
-export default function App() {
+import { ApolloProvider } from '@apollo/client';
+import React, { type PropsWithChildren } from 'react';
+import { SafeAreaView, View } from 'react-native';
+import AppRoutes from './src/routes';
+import GlobalStyles from './src/theme/GlobalStyles';
+import { client } from './src/graphQl/client'
+import Toast from 'react-native-toast-message'
+const App = () => {
   return (
-    <Container>
-      <Title>🦄 We are excited to see what you build!</Title>
-      <StatusBar style="auto" />
-    </Container>
+    <ApolloProvider client={client}>
+      <View style={GlobalStyles.container}>
+        <AppRoutes />
+        <Toast />
+      </View>
+    </ApolloProvider>
   );
-}
-
-const Container = styled.View`
-	flex: 1;
-	background-color: papayawhip;
-	justify-content: center;
-	align-items: center;
-	padding: 1rem;
-`;
-
-const Title = styled.Text`
-	font-size: 40px;
-	font-weight: 500;
-	color: palevioletred;
-`;
+};
+export default App;
