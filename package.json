@@ -1,0 +1,30 @@
+{
+  "name": "eatstro",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.0.11",
+    "expo": "~45.0.0",
+    "expo-status-bar": "~1.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.69.3",
+    "react-native-web": "0.18.7",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@testing-library/react-native": "^11.0.0",
+    "@types/react": "~18.0.15",
+    "@types/react-native": "~0.69.4",
+    "typescript": "~4.7.4"
+  },
+  "private": true
+}
